@@ -11,10 +11,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8">
 
-function changetax($this){
-    
-   $("#tax").text($this.value>0?("Income Tax: " + $this.value + "%") : "");
-}
+
 
 function calculate(e) {
     e.preventDefault();
@@ -77,7 +74,7 @@ $('#calculator').click( calculate );
 <p>Now choose the tax rate in both countries:</p>
 <div class="flex-container">
 <div>
-<select id="residenceRate" onchange="changetax(this)">
+<select id="residenceRate">
   <option>Tax rate in Residence State</option>
     <option value="10">10%</option>
 	<option value="15">15%</option>
@@ -87,7 +84,7 @@ $('#calculator').click( calculate );
 </select>
 </div>
 <div>
-<select id="sourceRate" onchange="changetax(this)">
+<select id="sourceRate">
   <option>Tax rate in Source State</option>
     <option value="10">10%</option>
 	<option value="15">15%</option>
